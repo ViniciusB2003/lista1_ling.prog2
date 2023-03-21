@@ -4,6 +4,12 @@ def validar(msg, validos):
         print("Digitou errado")
         valor = str(input(msg)).upper()
     return valor
+def buscamaiorvalor(opcoes):
+    itens = [0,0,0]
+    for resposta in respostas:
+        for opcao in opcoes:
+            itens[opcoes.index(opcao)] += 1
+    return opcoes[itens.index...]
  
 elevadores = ["A", "B", "C"]
 turnos = ["M", "V", "N"]
