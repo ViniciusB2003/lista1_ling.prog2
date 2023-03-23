@@ -4,12 +4,12 @@ def validar(msg, validos):
         print("Digitou errado")
         valor = str(input(msg)).upper()
     return valor
-def buscamaiorvalor(opcoes):
+def buscamaiorquantidade(opcoes):
     itens = [0,0,0]
     for resposta in respostas:
         for opcao in opcoes:
             itens[opcoes.index(opcao)] += 1
-    return opcoes[itens.index...]
+    return opcoes[itens.index(max(itens))]
  
 elevadores = ["A", "B", "C"]
 turnos = ["M", "V", "N"]
@@ -24,31 +24,8 @@ while(true):
     if input("Deseja continuar? S/N").upper() != "S":
         break
 
-elevadoresutilizados = [0,0,0]
-for resposta in respostas:
-    if resposta[0] == "A":
-        elevadoresutilizados[0] +=1
-    if resposta[0] == "B":
-        elevadoresutilizados[1] += 1
-    if resposta[0] == "C":
-        elevadoresutilizados[2] += 1
-
-maiorindice = elevadoresutilizados.index(max(elevadoresutilizados))
-print("O Elevador mais usado é o elevador", elevadores[maiorindice])
-
-turnosutilizados = [0,0,0]
-for resposta in respostas:
-    if resposta[0] == elevadores[maiorindice]:
-        if resposta[0] == "M":
-            turnosutilizados[0] +=1
-        if resposta[0] == "V":
-            turnosutilizados[1] += 1
-        if resposta[0] == "N":
-            turnosutilizados[2] += 1
-
-indiceturno = turnosutilizados.index(max(turnosutilizados))
-print("O Elevador mais utilizado", elevadores[maiorindice], "Sendo mais utilizado no turno", turnos[indiceturno])
-
+print("O Elevador mais usado é o elevador: ", buscamaiorquantidade(elevadores))
+print("O turno  mais usado é o elevador", buscamaiorquantidade(turnos))
 
 
 
