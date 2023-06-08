@@ -1,8 +1,8 @@
-from django.contrib import admin
+
 
 # Register your models here.
 
 from django.contrib import admin
-from .models import Principal
+from .models import Teste
 
-admin.site.register(Principal)
+admin.site.register(Teste)
